@@ -274,7 +274,7 @@ def legal_aid_homepage():
                     cols[0].markdown(f"**{row['Center Name']}**")
                     cols[1].markdown(row['Location'])  # or row['Address'] based on your dataset
                     cols[2].markdown(row['State'])
-                    cols[2].markdown(row['Contact Number'])
+                    cols[2].markdown(row['Mobile Number'])
                     cols[3].markdown(row['Consultant Name'])
             else:
                 st.warning(f"No rehabilitation centers found for {state_name}. Please check your spelling and try again.")
