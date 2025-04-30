@@ -1,531 +1,730 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Law Empowerment</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-  <!-- Favicons -->
-  <!-- <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+* {
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    box-sizing: border-box;
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    margin: 0;
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    padding: 0;
 
-  <!-- =======================================================
-  * Template Name: Dewi
-  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+}
+
+body {
+
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+
+    /* Fallback background */
+
+    background: #f6f5f7;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column; /* To position copyright below */
+
+    font-family: 'Poppins', sans-serif;
+
+    height: 100vh;
+
+    margin: -20px 0 50px; /* Adjust top margin if needed */
+
+}
+
+h1 {
+
+    font-weight: bold;
+
+    margin: 0;
+
+    font-size: 1.8em; /* Slightly larger headings */
+
+    margin-bottom: 10px; /* Spacing below heading */
+
+}
+
+h1 span { /* Style emoji inside heading differently if needed */
+
+    font-size: 0.9em;
+
+    margin-left: 5px;
+
+}
+
+p {
+
+    font-size: 14px;
+
+    font-weight: 300; /* Lighter weight for paragraph */
+
+    line-height: 20px;
+
+    letter-spacing: 0.5px;
+
+    margin: 20px 0 30px;
+
+}
+
+span {
+
+    font-size: 12px;
+
+    margin-bottom: 10px; /* Space below the 'or use...' text */
+
+}
+
+a {
+
+    color: #333;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    margin: 15px 0;
+
+    transition: color 0.3s ease;
+
+}
+
+a:hover {
+
+    color: #ff4b2b; /* Highlight on hover */
+
+}
+
+button {
+
+    border-radius: 20px;
+
+    border: 1px solid #ff4b2b;
+
+    background-color: #ff4b2b;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    padding: 12px 45px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    transition: transform 80ms ease-in, background-color 0.3s ease, border-color 0.3s ease;
+
+    cursor: pointer;
+
+    margin-top: 10px; /* Space above button */
+
+}
+
+button:active {
+
+    transform: scale(0.95);
+
+}
+
+button:focus {
+
+    outline: none;
+
+}
+
+button.ghost {
+
+    background-color: transparent;
+
+    border-color: #ffffff;
+
+}
+
+button.ghost:hover {
+
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover for ghost */
+
+}
+
+form {
+
+    background-color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    padding: 0 50px;
+
+    height: 100%;
+
+    text-align: center;
+
+}
+
+input {
+
+    background-color: #eee;
+
+    border: none;
+
+    padding: 12px 15px;
+
+    margin: 8px 0;
+
+    width: 100%;
+
+    border-radius: 5px; /* Slightly rounded inputs */
+
+    font-family: 'Poppins', sans-serif; /* Ensure font consistency */
+
+}
+
+input:focus {
+
+    outline: 2px solid #ff416c; /* Focus indicator */
+
+    background-color: #fff; /* Change background on focus */
+
+}
+
+.container {
+
+    background-color: #fff;
+
+    border-radius: 10px;
+
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.2); /* Softer shadow */
+
+    position: relative;
+
+    overflow: hidden;
+
+    width: 768px;
+
+    max-width: 100%;
+
+    min-height: 520px; /* Slightly taller */
+
+}
+
+.form-container {
+
+    position: absolute;
+
+    top: 0;
+
+    height: 100%;
+
+    transition: all 0.6s ease-in-out;
+
+}
+
+.sign-in-container {
+
+    left: 0;
+
+    width: 50%;
+
+    z-index: 2;
+
+}
+
+.sign-up-container {
+
+    left: 0;
+
+    width: 50%;
+
+    opacity: 0;
+
+    z-index: 1;
+
+}
+
+.overlay-container {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 50%;
+
+    width: 50%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    transition: transform 0.6s ease-in-out;
+
+    z-index: 100; /* Ensure overlay is on top */
+
+}
+
+.overlay {
+
+    background: #ff416c;
+
+    background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
+
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: 0 0;
+
+    color: #ffffff;
+
+    position: relative;
+
+    left: -100%;
+
+    height: 100%;
+
+    width: 200%;
+
+    transform: translateX(0);
+
+    transition: transform 0.6s ease-in-out;
+
+}
+
+.overlay-panel {
+
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    padding: 0 40px;
+
+    text-align: center;
+
+    top: 0;
+
+    height: 100%;
+
+    width: 50%;
+
+    transform: translateX(0);
+
+    transition: transform 0.6s ease-in-out;
+
+}
+
+.overlay-left {
+
+    transform: translateX(-20%); /* Start slightly off-screen */
+
+}
+
+.overlay-right {
+
+    right: 0;
+
+    transform: translateX(0);
+
+}
+
+/* --- Animation --- */
+
+/* Move Sign-in to the right */
+
+.container.right-panel-active .sign-in-container {
+
+    transform: translateX(100%);
+
+}
+
+/* Move overlay to the left */
+
+.container.right-panel-active .overlay-container {
+
+    transform: translateX(-100%);
+
+}
+
+/* Bring Sign-up over Sign-in */
+
+.container.right-panel-active .sign-up-container {
+
+    transform: translateX(100%);
+
+    opacity: 1;
+
+    z-index: 5;
+
+    animation: show 0.6s;
+
+}
+
+/* Move overlay back to the right */
+
+.container.right-panel-active .overlay {
+
+    transform: translateX(50%);
+
+}
+
+/* Move overlay panels */
+
+.container.right-panel-active .overlay-left {
+
+    transform: translateX(0);
+
+}
+
+.container.right-panel-active .overlay-right {
+
+    transform: translateX(20%); /* Move slightly off-screen */
+
+}
+
+@keyframes show {
+
+    0%, 49.99% {
+
+        opacity: 0;
+
+        z-index: 1;
+
+    }
+
+    50%, 100% {
+
+        opacity: 1;
+
+        z-index: 5;
+
+    }
+
+}
+
+/* Social Icons Styling (Optional) */
+
+.social-container {
+
+    margin: 20px 0;
+
+}
+
+.social-container a {
+
+    border: 1px solid #dddddd;
+
+    border-radius: 50%;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 0 5px;
+
+    height: 40px;
+
+    width: 40px;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.social-container a:hover {
+
+    background-color: #eee;
+
+    color: #ff4b2b;
+
+    border-color: transparent; /* Hide border on hover */
+
+}
+
+/* Copyright Notice */
+
+.copyright {
+
+    position: fixed; /* Or absolute if you prefer relative to body */
+
+    bottom: 10px;
+
+    right: 15px; /* Position in the bottom-right corner */
+
+    color: #aaa; /* Subtle color */
+
+    font-size: 0.8em;
+
+    font-weight: 300;
+
+    z-index: 1001; /* Ensure it's above everything */
+
+}
+
+/* Responsive adjustments (Example) */
+
+@media (max-width: 768px) {
+
+    .container {
+
+        width: 95%;
+
+        min-height: 500px;
+
+    }
+
+    .form-container {
+
+        padding: 0 20px; /* Less padding on smaller screens */
+
+    }
+
+    h1 {
+
+        font-size: 1.6em;
+
+    }
+
+    .overlay-panel {
+
+        padding: 0 20px;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    h1 {
+
+        font-size: 1.4em;
+
+    }
+
+    button {
+
+        padding: 10px 30px;
+
+    }
+
+    input {
+
+         padding: 10px 12px;
+
+    }
+
+    .social-container a {
+
+        height: 35px;
+
+        width: 35px;
+
+    }
+
+     .container {
+
+        min-height: 480px;
+
+    }
+
+     .copyright {
+
+        font-size: 0.7em;
+
+        bottom: 5px;
+
+        right: 10px;
+
+    }
+
+}
+    </style>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login & Sign Up | Welcome! ✨</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Optional: For social icons -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
-<body class="index-page">
+<body>
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+    <div class="container" id="container">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Law Empowerment</h1>
-      </a>
+        <!-- Sign Up Form -->
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">How It Works</a></li>
-          <li><a href="#features">Services</a></li>
-          
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+        <div class="form-container sign-up-container">
 
-      <a class="cta-btn" href="login.html">Login</a>
+            <form action="#">
 
-    </div>
-  </header>
+                <h1>Create Account 🚀</h1>
 
-  <main class="main">
+                <div class="social-container">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
 
-      <video src="assets/img/5636977-sd_640_360_24fps.mp4" alt="" data-aos="fade-in" autoplay muted loop playsinline></video>
-      <div class="container d-flex flex-column align-items-center">
-        <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Law Empowerment</h2>
-        <p data-aos="fade-up" data-aos-delay="200">Law Empowerment is your free, AI-powered gateway to accessible justice, simplifying legal processes for all. We combine advanced AI and pro bono lawyers to support every citizen, regardless of income, education, or location.</p>
-        <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-          <a href="#about" class="btn-get-started">Get Started</a>
-          <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
-        </div>
-      </div>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
 
-    </section><!-- /Hero Section -->
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3>About Us</h3>
-            <video src="assets/img/6699964-hd_1920_1080_24fps.mp4" class="img-fluid rounded-4" alt="" autoplay muted loop playsinline></video>
-            
-            <p>At Law Empowerment, we believe that justice is a fundamental right—not a privilege. Founded by a team of legal experts and engineers, our platform leverages AI-driven chatbots, document automation, and a nationwide directory of volunteer lawyers to bridge the gap between underprivileged communities and the legal system. </p>
-            <p>Our mission is to eliminate barriers such as cost, complexity, and lack of access to legal resources. By providing easy-to-understand guidance and direct connections to legal professionals, we ensure that every individual has an opportunity to seek justice and protect their rights.</p>
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-            <div class="content ps-0 ps-lg-5">
-              <p class="fst-italic">
-                We operate 24/7 in multiple Indian languages, offering:
-              </p>
-              <ul>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Instant legal guidance through conversational AI.</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Direct connections to verified pro bono advocates.</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span>A secure dashboard tracking your case progress.</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Educational resources to boost legal literacy.</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Holistic support, including rehabilitation and social welfare services.</span></li>
-              </ul>
-              <p>
-                We partner with NGOs, government bodies, and law schools to ensure that no one faces injustice alone.
-              </p>
-
-              <div class="position-relative mt-4">
-                <img src="assets/img/court-hammer-books-judgment-law-concept.jpg" class="img-fluid rounded-4 mb-4" alt="">
-                <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a> -->
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-
-
-   
-    <!-- how it works Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Workflow</h2>
-        <p>How It Works<br></p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-5">
-
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/court-hammer-books-judgment-law-concept.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-pencil-square"></i>
                 </div>
-                
-                  <h3>Submit Your Legal Concern</h3>
-                </a>
-                <p>Register & Describe Your Issue <br>
-                  Create a free account and submit a brief description of your legal concern via text or voice.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
 
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/still-life-with-scales-justice (1).jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-kanban"></i>
-                </div>
-               
-                  <h3>Receive Initial Guidance</h3>
-                </a>
-                <p>Our multilingual AI assistant analyzes your query to offer immediate guidance or, when needed, connects you with a volunteer lawyer matched to your case.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
+                <span>or use your email for registration</span>
 
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/still-life-with-scales-justice.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-people"></i>
-                </div>
-                
-                
-                  <h3>Stay Supported & Informed</h3>
-                </a>
-                <p>
-                  Monitor case updates, deadlines, and documents through your dashboard, while accessing counseling, rehabilitation, and social services to support your legal journey.</p>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
+                <input type="text" placeholder="👤 Name" required />
 
-          
+                <input type="email" placeholder="📧 Email" required/>
 
-        </div>
+                <input type="password" placeholder="🔒 Password" required/>
 
-      </div>
+                <button type="submit">Sign Up</button>
 
-    </section><!-- /how it works Section -->
-    
-    <!-- services Section -->
-    <section id="features" class="features section">
-
-      <div class="container">
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Services</h2>
-          <p>Featured Srvices<br></p>
-        </div>
-
-        <ul class="nav nav-tabs row  d-flex" data-aos="fade-up" data-aos-delay="100">
-          <li class="nav-item col-3">
-            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
-              <i class="bi bi-robot"></i>
-              <h4 class="d-none d-lg-block">AI Legal Assistance Chatbot</h4>
-            </a>
-          </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
-              <i class="bi bi-kanban"></i>
-              <h4 class="d-none d-lg-block">Case Management & Progress Tracking</h4>
-            </a>
-          </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
-              <i class="bi bi-people"></i>
-              <h4 class="d-none d-lg-block">Pro Bono Lawyer & Resource Directory</h4>
-            </a>
-          </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-4">
-              <i class="bi bi-heart"></i>
-              <h4 class="d-none d-lg-block">Rehabilitation & Social Welfare Services</h4>
-            </a>
-          </li>
-        </ul><!-- End Tab Nav -->
-
-        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="tab-pane fade active show" id="features-tab-1">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>AI Legal Assistance Chatbot</h3>
-                <p class="fst-italic">
-                  Provides real-time, plain-language answers to legal questions, helping users understand rights and offering step-by-step legal guidance.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check2-all"></i>
-                    <spab>Clear, plain-language answers to legal queries.</spab>
-                  </li>
-                  <li><i class="bi bi-check2-all"></i> <span>Instant, accurate legal advice via AI.</span>.</li>
-                  <li><i class="bi bi-check2-all"></i> <span>Step-by-step assistance on common issues.</span></li>
-                </ul>
-                <p>
-                  The AI Legal Assistance Chatbot revolutionizes legal support by delivering fast, reliable, and easy-to-understand answers. It empowers users to make informed decisions and provides clear, practical guidance for navigating common legal challenges confidently.
-                </p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="./assets/img/chatbot.jpg" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div><!-- End Tab Content Item -->
-
-          <div class="tab-pane fade" id="features-tab-2">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3> Case Management & Progress Tracking</h3>
-                <p>
-                  Centralizes case documents, deadlines, and communications in one secure dashboard, ensuring you stay on track with automated reminders.
-                </p>
-                
-                <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Secure dashboard for all case-related data.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Automated reminders for important deadlines.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Track documents, court dates, and progress easily.</span></li>
-                  
-                </ul>
-
-                <p class="fst-italic">
-                  With centralized data and automated reminders, Case Management & Progress Tracking simplifies the legal process. It ensures users never miss a deadline and helps them stay organized, making case management smoother and more efficient.
-                </p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="./assets/img/dashboard.jpg" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div><!-- End Tab Content Item -->
-
-          <div class="tab-pane fade" id="features-tab-3">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Pro Bono Lawyer & Resource Directory</h3>
-                <p>
-                  Connects users with volunteer lawyers and free legal aid services, providing free consultations and document sharing to discuss cases.
-                </p>
-                <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Free consultations with volunteer lawyers.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Access to legal aid resources across India.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Effortless document sharing and case discussions.</span></li>
-                </ul>
-                <p class="fst-italic">
-                  The Pro Bono Lawyer & Resource Directory connects users to volunteer legal experts and essential aid services. It ensures that those in need receive free consultations, empowering them with the support they require at no cost.
-                </p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="./assets/img/probo law.jpg" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div><!-- End Tab Content Item -->
-
-          <div class="tab-pane fade" id="features-tab-4">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3> Rehabilitation & Social Welfare Services</h3>
-                <p>
-                  Recommends counseling, vocational training, and social welfare programs, supporting holistic recovery and reintegration for individuals beyond legal matters.
-                </p>
-                
-                <ul>
-                  <li><i class="bi bi-check2-all"></i> <span>Tailored recommendations for rehabilitation and social services.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Includes counseling, training, and shelter options.</span></li>
-                  <li><i class="bi bi-check2-all"></i> <span>Focus on holistic recovery and reintegration.</span></li>
-                </ul>
-
-                <p class="fst-italic">
-                  Rehabilitation & Social Welfare Services go beyond legal advice, offering tailored resources for mental health, vocational training, and social reintegration. This comprehensive approach supports individuals in rebuilding their lives holistically, post-legal resolution.
-                </p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/rehab.jpg" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div><!-- End Tab Content Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Features Section -->
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Get in Touch With Us</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-          <div class="col-lg-6 ">
-            <div class="row gy-4">
-
-              <div class="col-lg-12">
-                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
-                  <i class="bi bi-geo-alt"></i>
-                  <h3>Address</h3>
-                  <p>Off, Old Mahabalipuram Road, Kamaraj Nagar, Semmancheri, Chennai, Tamil Nadu 600119</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="col-md-6">
-                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bi bi-telephone"></i>
-                  <h3>Call Us</h3>
-                  <p>+91 1234567890</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="col-md-6">
-                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
-                  <i class="bi bi-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-            </div>
-          </div>
-        
-          <div class="col-lg-6">
-            <form action="https://formspree.io/f/mldbgpgq" method="POST" class="contact-form" data-aos="fade-up" data-aos-delay="500">
-              <div class="row gy-4">
-          
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-          
-                <div class="col-md-6">
-                  <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                </div>
-          
-                <div class="col-md-12">
-                  <input type="text" name="subject" class="form-control" placeholder="Subject" required>
-                </div>
-          
-                <div class="col-md-12">
-                  <textarea name="message" class="form-control" rows="4" placeholder="Message" required></textarea>
-                </div>
-          
-                <div class="col-md-12 text-center">
-                  <div class="loading" style="display: none;">Loading</div>
-                  <div class="error-message text-danger" style="display: none;"></div>
-                  <div class="sent-message text-success" style="display: none;">Your message has been sent. Thank you!</div>
-          
-                  <button type="submit">Send Message</button>
-                </div>
-          
-              </div>
             </form>
-          </div>
-          
-          <script>
-            document.getElementById('contactForm').addEventListener('submit', function(e) {
-              e.preventDefault();
-          
-              const loading = document.querySelector('.loading');
-              const errorMessage = document.querySelector('.error-message');
-              const sentMessage = document.querySelector('.sent-message');
-          
-              loading.style.display = 'block';
-              errorMessage.style.display = 'none';
-              sentMessage.style.display = 'none';
-          
-              setTimeout(() => {
-                loading.style.display = 'none';
-          
-                // Simulate successful submission
-                sentMessage.style.display = 'block';
-          
-                // Optionally, reset form
-                e.target.reset();
-              }, 1500);
-            });
-          </script>
-          
 
         </div>
 
-      </div>
+        <!-- Sign In Form -->
 
-    </section><!-- /Contact Section -->
+        <div class="form-container sign-in-container">
 
-  </main>
+            <form action="#">
 
-  <footer id="footer" class="footer dark-background">
+                <h1>Sign In 👋</h1>
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Law Empowerment</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>Off, Old Mahabalipuram Road, </p>
-            <p> Kamaraj Nagar, Semmancheri, Chennai, Tamil Nadu 600119</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+91 1234567890</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
+                <div class="social-container">
+
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+
+                </div>
+
+                <span>or use your account</span>
+
+                <input type="email" placeholder="📧 Email" required/>
+
+                <input type="password" placeholder="🔒 Password" required/>
+
+                <a href="#">Forgot your password? 🤔</a>
+
+                <button type="submit">Sign In</button>
+                
+
+            </form>
+
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#features">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#services">How It Works</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contact</a></li>
-          </ul>
+        <!-- Overlay Container -->
+
+        <div class="overlay-container">
+
+            <div class="overlay">
+
+                <!-- Overlay Left Panel (Shown when Sign In is active) -->
+
+                <div class="overlay-panel overlay-left">
+
+                    <h1>Welcome Back! 🎉</h1>
+
+                    <p>To keep connected with us please login with your personal info</p>
+
+                    <button class="ghost" id="signIn">Sign In</button>
+
+                </div>
+
+                <!-- Overlay Right Panel (Shown when Sign Up is active) -->
+
+                <div class="overlay-panel overlay-right">
+
+                    <h1>Hello, Friend! ✨</h1>
+
+                    <p>Enter your personal details and start your journey with us</p>
+
+                    <button class="ghost" id="signUp">Sign Up</button>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">AI Legal Assistance Chatbot</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Case Management & Progress Tracking</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">
-              Pro Bono Lawyer & Resource Directory</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">
-              Rehabilitation & Social Welfare Services</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h1 style="margin-top: 20%;">Law Empowerment</h1>
-          
-        </div>
-
-      </div>
     </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Law Empowerment</strong> <span>All Rights Reserved</span></p>
-      >
+    <div class="copyright">
+
+        @copyright by legalaid
+
     </div>
 
-  </footer>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    if (signUpButton && signInButton && container) {
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+    }
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    // LOGIN VALIDATION
+    const signInForm = document.querySelector('.sign-in-container form');
+    if (signInForm) {
+        signInForm.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+            const email = signInForm.querySelector('input[type="email"]').value;
+            const password = signInForm.querySelector('input[type="password"]').value;
+
+            if (email === "kattarohith99@gmail.com" && password === "qwerty12345") {
+                // redirect to Streamlit app
+                window.location.href = "https://legalaid-vxuadzcjvgckayflwzmopt.streamlit.app/"; // or replace with deployed URL
+            } else {
+                alert("Invalid email or password. Please try again.");
+            }
+        });
+    }
+});
+</script>
 
 </body>
 
