@@ -15,7 +15,15 @@
     padding: 0;
 
 }
-
+video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
 body {
 
     background: linear-gradient(to right, #ff4b2b, #ff416c);
@@ -580,7 +588,7 @@ input:focus {
 </head>
 
 <body>
-
+    <video src="assets/img/5636977-sd_640_360_24fps.mp4" alt="" data-aos="fade-in" autoplay muted loop playsinline></video>
     <div class="container" id="container">
 
         <!-- Sign Up Form -->
